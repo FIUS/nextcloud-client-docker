@@ -2,7 +2,7 @@
 while :
 do
   # nc sync command here
-  nextcloudcmd -u $NC_USER -p $NC_PASS /sync/data $NC_URL --non-interactive
+  nextcloudcmd --non-interactive -u $NC_USER -p $NC_PASS /sync/data $NC_URL
   #sync every 3*60=180 seconds
   sleep $SLEEP_INTERVAL
 done
