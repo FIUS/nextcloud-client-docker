@@ -1,0 +1,13 @@
+services:
+  nextcloud-client:
+    container_name: nextcloud_client
+    image: nextcloud-client3
+    restart: always
+    environment:
+      NC_USER: your_username
+      NC_PASS: your_passwd
+      NC_URL: https://your_nextcloud_url
+      SLEEP_INTERVAL: 180
+      # will always sync to /sync/data (in the container - mount to wherever you want.)
+    volumes:
+      - ./your_path:/sync/data
