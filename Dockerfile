@@ -1,4 +1,4 @@
-FROM debian
+FROM ubuntu
 RUN apt update
 RUN apt install software-properties-common -y
 RUN add-apt-repository ppa:nextcloud-devs/client -y
